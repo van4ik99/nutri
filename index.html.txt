@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Ohio Mom's $99 Secret – HealthWatch News</title>
+    <style>
+        /* ========== СТИЛИ (полная копия из предыдущего шаблона) ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Header */
+        .site-header {
+            background: #1a2b3c;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #e67e22;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #e67e22;
+        }
+
+        .header-links {
+            font-size: 14px;
+        }
+
+        .header-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .header-links a:hover {
+            color: white;
+        }
+
+        /* Article Meta */
+        .article-meta {
+            padding: 20px 25px 10px;
+            border-bottom: 1px solid #eee;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .category {
+            color: #e67e22;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 1.2;
+            margin: 15px 0 10px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .byline {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .byline strong {
+            color: #222;
+        }
+
+        .share-bar {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .share-icon {
+            background: #f0f0f0;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .share-icon:hover {
+            background: #e0e0e0;
+        }
+
+        /* Featured Image */
+        .featured-image {
+            margin: 0 0 25px;
+            text-align: center;
+        }
+
+        .featured-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .featured-image figcaption {
+            font-size: 14px;
+            color: #777;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* Article Content */
+        .article-content {
+            padding: 0 25px 20px;
+            font-size: 18px;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            margin: 30px 0 15px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .article-content h3 {
+            font-size: 22px;
+            margin: 25px 0 10px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .pull-quote {
+            background: #f9f9f9;
+            padding: 25px;
+            border-left: 4px solid #e67e22;
+            margin: 30px 0;
+            font-size: 20px;
+            font-style: italic;
+            color: #333;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .pull-quote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            font-style: normal;
+            color: #666;
+        }
+
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .step {
+            flex: 1 1 200px;
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .step .step-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .step h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #1a2b3c;
+        }
+
+        .step p {
+            font-size: 16px;
+            color: #555;
+            margin: 0;
+        }
+
+        .testimonials {
+            margin: 30px 0;
+        }
+
+        .testimonial {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-stars {
+            color: #f39c12;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-text {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .benefits {
+            background: #1a2b3c;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .benefits h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits li {
+            padding: 10px 0;
+            border-bottom: 1px solid #334455;
+            font-size: 18px;
+        }
+
+        .benefits li:before {
+            content: "✓ ";
+            color: #e67e22;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .cta-box h2 {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .cta-box p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #d35400;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        .fine-print {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            margin-top: 15px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #1a2b3c;
+            color: #aaa;
+            padding: 20px 25px;
+            font-size: 14px;
+            text-align: center;
+            border-top: 1px solid #334455;
+        }
+
+        .site-footer a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .site-footer a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            .article-content {
+                padding: 0 20px;
+                font-size: 17px;
+            }
+            .cta-button {
+                font-size: 22px;
+                padding: 15px 25px;
+            }
+            .steps {
+                flex-direction: column;
+            }
+            .header-links {
+                display: none;
+            }
+        }
+    </style>
+    <!-- Сюда потом вставишь код пикселя PopAds (можно и внизу) -->
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="logo">Health<span>Watch</span> News</div>
+            <div class="header-links">
+                <a href="#">Home</a>
+                <a href="#">Health</a>
+                <a href="#">Wellness</a>
+                <a href="#">Video</a>
+            </div>
+        </header>
+
+        <!-- Article Meta -->
+        <div class="article-meta">
+            <span class="category">EXCLUSIVE INVESTIGATION</span>
+            <h1>How a Mother of Two Lost 28 Pounds in 5 Weeks Using a Simple $99 Meal Plan – Doctors Are Calling It a "Game-Changer"</h1>
+            <div class="byline">
+                By <strong>Michael Stevens</strong>, Senior Health Correspondent<br>
+                <span style="color:#777;">Published: February 28, 2026 | Updated: 1 hour ago</span>
+            </div>
+            <div class="share-bar">
+                <a href="#" class="share-icon">📘 Facebook</a>
+                <a href="#" class="share-icon">🐦 Twitter</a>
+                <a href="#" class="share-icon">📧 Email</a>
+                <a href="#" class="share-icon">🔗 Copy Link</a>
+            </div>
+        </div>
+
+        <!-- Featured Image -->
+        <figure class="featured-image">
+            <!-- Прямая ссылка на твоё фото (с ImgBB) -->
+            <img src="https://i.ibb.co/mr21pjdJ/2026-02-26-150511.png" alt="Sarah before and after Nutrisystem">
+            <figcaption>Sarah Mitchell, 38, from Columbus, OH, photographed 5 weeks apart after starting the Nutrisystem plan. (Photo: Courtesy of family)</figcaption>
+        </figure>
+
+        <!-- Article Content -->
+        <div class="article-content">
+            <p><strong>COLUMBUS, Ohio</strong> – After her second child, Sarah Mitchell weighed 185 pounds. She tried every diet imaginable – keto, intermittent fasting, even expensive juice cleanses. Nothing worked long-term. "I felt invisible," she says. "I was constantly tired, my knees hurt, and I dreaded looking in the mirror."</p>
+            <p>Then a friend mentioned a meal plan she'd seen on the news. It was affordable – just $99 – and people were getting real results. Skeptical but desperate, Sarah decided to give it a shot.</p>
+            <p>"The first week, I lost 5 pounds. I wasn't hungry, and the food was actually good," she recalls. "By the end of the first month, I'd dropped 15 pounds. My energy came back, and I started sleeping through the night."</p>
+            <p>Now, after just five weeks, Sarah is down 28 pounds and wears a size 6 again. "I never thought I'd feel this good," she says.</p>
+
+            <!-- Экспертное мнение -->
+            <div class="pull-quote">
+                "What makes this approach different is the focus on portion control and balanced nutrition. It's a sustainable lifestyle change."
+                <cite>— Dr. Emily Richardson, Board-Certified Nutritionist</cite>
+            </div>
+
+            <h2>How It Works</h2>
+            <p>The program, called Nutrisystem, delivers pre-portioned meals right to your door. There's no counting calories, no complex rules – just heat and eat. With over 150 menu options, including favorites like pizza, burgers, and chocolate cake, it's designed to be enjoyable and sustainable.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">🍽️</div>
+                    <h4>1. Choose</h4>
+                    <p>Select your meals online from 150+ delicious options.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">📦</div>
+                    <h4>2. Receive</h4>
+                    <p>Free shipping right to your door.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🔥</div>
+                    <h4>3. Enjoy</h4>
+                    <p>Heat, eat, and watch the pounds melt away.</p>
+                </div>
+            </div>
+
+            <h2>Real People, Real Results</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"I've tried Weight Watchers, Noom, you name it. This is the first time I've lost weight and kept it off. Down 22 pounds in 6 weeks!"</div>
+                    <div class="testimonial-author">— Linda K., 52, Texas</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"My husband and I started together. We've lost a combined 40 pounds. The food is delicious and it's so easy."</div>
+                    <div class="testimonial-author">— Karen P., 44, Florida</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"I was skeptical about a meal plan, but this changed my life. I have more energy, my skin is clearer, and I finally feel confident again."</div>
+                    <div class="testimonial-author">— Jessica M., 35, New York</div>
+                </div>
+            </div>
+
+            <div class="benefits">
+                <h3>Why Nutrisystem Works</h3>
+                <ul>
+                    <li><strong>Doctor-designed meals</strong> – Created by nutritionists for balanced nutrition.</li>
+                    <li><strong>No counting calories</strong> – Everything is pre-portioned.</li>
+                    <li><strong>Free shipping</strong> – Right to your door.</li>
+                    <li><strong>100% money-back guarantee</strong> – If you don't lose weight, you don't pay.</li>
+                    <li><strong>Flexible plans</strong> – Starting at just $99.</li>
+                </ul>
+            </div>
+
+            <h2>Limited Time Offer</h2>
+            <p>Due to high demand, Nutrisystem is offering a special discount for our readers. For a limited time, you can get the complete meal plan for just $99 – that's less than $3 per meal.</p>
+
+            <!-- БЛОК С КНОПКОЙ – ЗДЕСЬ НУЖНО ВСТАВИТЬ ТВОЮ ТРЕКИНГ-ССЫЛКУ -->
+            <div class="cta-box">
+                <h2>Claim Your $99 Meal Plan Now</h2>
+                <p>Spots are filling fast. This offer may end at any time.</p>
+                <!-- ЗАМЕНИ "#" НА ТВОЮ ТРЕКИНГ-ССЫЛКУ ИЗ CLICKDEALER -->
+                <a href="#" class="cta-button">👉 START YOUR JOURNEY 👈</a>
+                <div class="fine-print">*Results may vary. Money-back guarantee applies.</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div>
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Contact</a> | 
+                <a href="#">Ad Choices</a>
+            </div>
+            <div style="margin-top:10px;">
+                © 2026 HealthWatch News. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- МЕСТО ДЛЯ ПИКСЕЛЯ POPADS – вставь сюда код, который дали в PopAds -->
+    <!--
+    <script type="text/javascript">
+        // Твой код пикселя PopAds
+    </script>
+    -->
+</body>
+</html>
